@@ -40,4 +40,16 @@ namespace LoginReg.Models
         public string ConfirmPassword {get; set;}
 
     }
+
+    public class LoginUser
+    {
+        [EmailAddress]
+        [Required]
+        [Display(Name="Email")]
+        public string EmailAttempt {get; set;}
+
+        [DataType(DataType.Password)]
+        [Display(Name="Password")]
+        public string PasswordAttempt {get; set;}
+    }
 }
